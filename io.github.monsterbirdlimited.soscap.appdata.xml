@@ -7,7 +7,7 @@
 	  <p>A simple screen capture utility for Linux
 		-Created by Cptnrogers with help from Thimslugga</p>
 	</description>
-  <name>SOSCap</name>
+  <name>SOSdsktp</name>
   <developer_name>Cptnrogers</developer_name>
   <launchable type="desktop-id">io.github.monsterbirdlimited.soscap.desktop</launchable>
   <categories>
