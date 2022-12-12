@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=SOSCap
+Name=SOSdsktp
 Version=1.0
-Exec=soscap
+Exec=sosdsktp
 Icon=io.github.monsterbirdlimited.soscap
 Terminal=false
 Type=Application
