@@ -1,5 +1,5 @@
 ---
-app-id: io.github.monsterbirdlimited.soscap
+app-id: io.github.monsterbirdlimited.sosdsktp
 runtime: org.gnome.Platform
 runtime-version: "43"
 sdk: org.gnome.Sdk
