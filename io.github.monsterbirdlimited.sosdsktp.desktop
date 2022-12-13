@@ -2,7 +2,7 @@
 Name=SOSdsktp
 Version=1.0
 Exec=sosdsktp
-Icon=io.github.monsterbirdlimited.soscap
+Icon=io.github.monsterbirdlimited.sosdsktp
 Terminal=false
 Type=Application
 Categories=AudioVideo;Recorder
