@@ -57,8 +57,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Monsterbirdlimited/sosdsktp
-        commit: c99ccc4e342cf57cd5564532a8599da57e43220d
-        tag: v0.1.0-delta 
+        commit: e4b7ba112bd2043901274ae99b58d213bd804f7d
+        tag: v0.2.0-delta  
         x-checker-data:
           type: git
           tag-pattern: ^v([\\d.]+)$
