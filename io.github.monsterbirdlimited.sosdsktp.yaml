@@ -64,7 +64,7 @@ modules:
           tag-pattern: ^v([\\d.]+)$
           is-main-source: true
     build-commands:
-      - install -Dm755 soscap.py ${FLATPAK_DEST}/bin/sosdsktp
+      - install -Dm755 sosdsktp.py ${FLATPAK_DEST}/bin/sosdsktp
       - install -Dm644 io.github.monsterbirdlimited.sosdsktp.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 io.github.monsterbirdlimited.soscap.png ${FLATPAK_DEST}/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.png
       
