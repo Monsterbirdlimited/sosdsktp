@@ -14,7 +14,7 @@ from gi.repository import Gst, Gtk
 class GTK_Main:
     def __init__(self):
         window = Gtk.Window()
-        window.set_title("SOSCap")
+        window.set_title("SOSdsktp")
         window.set_default_size(120, 50)
         window.connect("destroy", Gtk.main_quit, "WM destroy")
         vbox = Gtk.VBox()
@@ -36,7 +36,7 @@ class GTK_Main:
         
         # ximagesrc
         # pipewiresrc
-        self.player = Gst.parse_launch("ximagesrc do-timestamp=True ! queue ! videoscale ! videoconvert ! x264enc key-int-max=12 cabac=1 bframes=2 ! video/x-h264, width=1280, height=720, profile=high ! mux. pulsesrc device=alsa_output.sink.monitor ! queue ! audioconvert ! audioresample ! lamemp3enc bitrate=320 ! mp4mux name=mux reserved-bytes-per-sec=100 reserved-max-duration=20184000000000 reserved-moov-update-period=100000000 ! filesink location=/home/deck/Videos/SOSCap.mp4 sync=true")
+        self.player = Gst.parse_launch("ximagesrc do-timestamp=True ! queue ! videoscale ! videoconvert ! x264enc key-int-max=12 cabac=1 bframes=2 ! video/x-h264, width=1280, height=720, profile=high ! mux. pulsesrc device=alsa_output.sink.monitor ! queue ! audioconvert ! audioresample ! lamemp3enc bitrate=320 ! mp4mux name=mux reserved-bytes-per-sec=100 reserved-max-duration=20184000000000 reserved-moov-update-period=100000000 ! filesink location=/home/deck/Videos/SOSdsktp.mp4 sync=true")
         bus = self.player.get_bus()
         bus.add_signal_watch()
         bus.enable_sync_message_emission()
@@ -44,11 +44,11 @@ class GTK_Main:
         bus.connect("sync-message::element", self.on_sync_message)
 
     def rename(self, src):
-        f_path = "/home/deck/Videos/SOSCap.mp4"
+        f_path = "/home/deck/Videos/SOSdsktp.mp4"
         t = os.path.getctime(f_path)
         t_str = time.ctime(t)
         t_obj = time.strptime(t_str)
-        form_t = time.strftime("SOSCap_%Y-%m-%d %H:%M:%S", t_obj)
+        form_t = time.strftime("SOSdsktp_%Y-%m-%d %H:%M:%S", t_obj)
         form_t = form_t.replace(":", "꞉")
         os.rename(
             f_path, os.path.split(f_path)[0] + '/' + form_t + os.path.splitext(f_path)[1])
